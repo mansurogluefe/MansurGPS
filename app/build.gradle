@@ -1,0 +1,27 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.mansuroglu.gps'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mansuroglu.gps"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    // Konum servisleri için gerekli kütüphane
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    // Telegram API haberleşmesi için (HTTP istekleri)
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+}
